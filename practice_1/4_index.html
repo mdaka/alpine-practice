@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1.4</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    
+    <div x-data="{ msg: 'Alpine.js - Practice 1.4', counter:0 }">
+  
+        <h1 x-text="msg"></h1> 
+        
+        <h3><strong style="color:red">Notice:</strong> {counter} or {{counter}} are not affected</h3>
+        
+        <p>
+            Counter = <strong x-text="counter"></strong>
+        </p>
+
+        <button 
+                x-on:click="msg = 'Here we go'; counter = counter+1;">
+                Click me to change the above msg
+        </button>
+        
+        <button @click="counter = 0">Reset Counter to Zero</button>
+    </div>
+</body>
+</html>
